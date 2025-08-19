@@ -338,10 +338,6 @@ header h1 {
         width: 100%; /* stretch to full container */
     }
 
-    .data-table thead {
-        display: none; /* hide headers on mobile */
-    }
-
     .data-table,
     .data-table tbody,
     .data-table tr,
@@ -381,3 +377,4 @@ header h1 {
         padding-left: 0;
     }
 }
+
