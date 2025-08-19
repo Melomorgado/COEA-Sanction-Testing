@@ -321,3 +321,63 @@ header h1 {
 #cancelApproveBtn:hover {
     background-color: #5a6268;
 }
+
+
+/* Responsive Styles (for screens smaller than 600px) */
+/* ✅ Desktop (normal) mode stays unchanged */
+
+/* ✅ Mobile mode only */
+@media (max-width: 600px) {
+    .table-container {
+        width: 95%;
+        max-width: none;
+        margin: 20px auto;
+    }
+
+    .data-table {
+        width: 100%; /* stretch to full container */
+    }
+
+    .data-table thead {
+        display: none; /* hide headers on mobile */
+    }
+
+    .data-table,
+    .data-table tbody,
+    .data-table tr,
+    .data-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: white;
+        padding: 10px;
+    }
+
+    .data-table td {
+        border-bottom: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    .data-table td:before {
+        content: attr(data-field);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #8b5cf6;
+        text-align: left;
+    }
+
+    /* Center "No records found" */
+    .data-table td[colspan] {
+        text-align: center;
+        padding-left: 0;
+    }
+}
