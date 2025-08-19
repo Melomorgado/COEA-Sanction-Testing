@@ -336,39 +336,23 @@ header h1 {
 
     .data-table {
         width: 100%; /* stretch to full container */
+        display: table; /* Keep table behavior */
     }
 
-    .data-table,
-    .data-table tbody,
-    .data-table tr,
-    .data-table td {
-        display: block;
-        width: 100%;
+    /* ✅ keep the header visible on mobile */
+    .data-table thead {
+        display: table-header-group;
     }
 
     .data-table tr {
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: white;
-        padding: 10px;
+        display: table-row;
     }
 
-    .data-table td {
-        border-bottom: none;
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-    }
-
-    .data-table td:before {
-        content: attr(data-field);
-        position: absolute;
-        left: 6px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #8b5cf6;
-        text-align: left;
+    .data-table td,
+    .data-table th {
+        display: table-cell;
+        width: auto;
+        padding: 12px 8px;
     }
 
     /* Center "No records found" */
@@ -377,3 +361,4 @@ header h1 {
         padding-left: 0;
     }
 }
+
